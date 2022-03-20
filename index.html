@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+			href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"
+			integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous"/>
+
+			<!-- change with custom?-->
+			<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap"
+			rel="stylesheet">
+		<link rel="stylesheet" href="css/style.css" />
+		<title>Michael Ryberg's Portfolio</title>
+	</head>
+	<body>
+		<header>
+			<div class = "logo">
+				<img src="file/path" alt="">
+			</div>
+			<button class ="nav-toggle" aria-label="toggle navigation">
+				<span class="hamburger"></span>
+			</button>
+			<nav class="nav">
+				<ul class="nav__list">
+					<li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+					<li class="nav__item"><a href="#services" class="nav__link">My Services</a></li>
+					<li class="nav__item"><a href="#about" class="nav__link">About Me</a></li>
+					<li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+					<li class="nav_item"><a href="https://www.github.com/TheCliCommander" class="nav_link">Github</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- Introduction -->
+		<section class="intro" id="home">
+			<h1 class="section__title section__title--intro">
+				Hi, I am  <strong>Michael Ryberg</strong>
+			</h1>
+			<p class="section__subtitle section__subtitle--intro">Developer and all-around computer nerd!</p>
+			<img src="img/michael.jpg" alt="a picture of Michael Ryberg" class="intro__img">
+		</section>
+
+		<!--My Services-->
+		<section class="my-services" id="services">
+			<h2 class="section__title section__title--services">What I do</h2>
+			<div class="services">
+				<div class="service">
+					<h3>Development</h3>
+					<p>I do everything from web design to app development. I create custom command line tools, and apps with 
+					   sleek and modern UI's, both of which often utilize backend SQL and NoSql databases. Whatever your need
+					   I'm certain I can find a solution using one of the several programming languages with which I am familiar.
+					   These include Python, C#, JavaScript, SQL(including Postgres, MySQL, SQLite), Bash, as well as 
+					   markup languages like HTML and YAML, and of course style sheet languages like CSS. I will always
+					   strive to find the most appropriate languages and tools for a given project and if that means learning a new
+					   language I am not only capable but excited to do so in a timely manner. 
+					    
+					</p>
+				</div> <!-- / service -->
+
+				<div class="service">
+					<h3>Linux System Administration</h3>
+					<p>I absolutley love Linux! I spent over 100 hours just taking video courses when I first met Tux. I've spent hundreds
+					   more working on projects like setting up network fileshares between various devices and virtual machines, learning cyber security practices on
+					   sites like hackthebox.com, overthewire.org, hackthissite.org and my favorite tryhackme.com. I started my adventures with python on a Linux
+					   distro and my first few projects were ethical hacking tools like webcrawlers, vulnerability scanners, backdoor and listener etc. You can find
+					   all of the code for these projects on my github: <a href="https://www.github.com/TheCliCommander">TheCliCommander</p>
+				</div> <!-- / service -->
+
+				<div class="service">
+					<h3></h3>
+					<p></p>
+				</div> <!-- / service -->
+				
+			</div> <!-- / services -->
+
+			<a href="#services" class="btn">My Services</a>
+		</section>
+
+		<!-- About Me -->
+		<section class="about-me" id="about">
+			<h2 class="section__title section__title--about">Who I am</h2>
+			<p class="section__subtitle section__subtitle--about">
+				'Self-Taught' Computer Whiz
+			</p>
+
+			<div class="about-me__body">
+				<p>Thanks to the wonders of the internet I was able to research and teach myself several coding languages,
+				   networking and security practices, and Linux System Administration. I've been in love with computers since
+				   my father built our first home computer in the late 90's and learned my first bit of HTML way back then. I 
+				   spent countless hours playing on the computer learning as much as I could using our dial-up internet. I was much
+				   older when I finally got to really get into learning computer science but the interest was always there, and I'm 
+				   certainly seizing every opportunity now!
+				</p>
+				<p></p>
+			</div>
+			<img src="file/path" alt="Me doing something">
+		</section>
+
+		<!-- Projects -->
+		<section class="projects" id="projects">
+			<h2 class="section__title">Projects</h2>
+			<p class="section__subtitle section__subtitle--project">
+				Portfolio
+			</p>
+			<div class="projects__body">
+				<p>
+					Here is a portfolio of my favorite projects. Click an image to see video of that application in use!
+				</p>
+			</div>
+
+			<div class="portfolio">
+				<!-- Portfolio item 01 -->
+				<a href="#" class="portfolio__item">
+					<img src="img/OnTime.png" alt="picture of OnTime App" class="portfolio__img">
+				</a>
+
+				<!-- Portfolio item 02 -->
+				<a href="#" class="portfolio__item">
+					<img src="img/PassBox.jpg.png" alt="picture of PassBox App" class="portfolio__img">
+				</a>
+
+				
+				</a>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer>
+			<a href="mailto:michaelryberg21@gmail.com" class="footer__link">michaelryberg21@gmail.com</a>
+			<ul class="social-list">
+				<li class="social-list__item">
+					<a class="social-list__link"
+					href="https://www.github.com/TheCliCommander">Github</a>
+				</li>
+				<li class="social-list__item">
+					<a class="social-list__link"
+					href="https://www.linkedin.com/in/michael-ryberg-871b33196/">LinkedIn</a>
+				</li>
+			</ul>
+		</footer>
+
+	</body>
+	</html>
