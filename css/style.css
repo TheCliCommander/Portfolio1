@@ -22,6 +22,9 @@
     --fs-h3: 1.25rem;
     --fs-body: 1rem;
 
+    --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
+          0.125em 0.125em 0.25em rgba(0,0,0,.15);
+
 }
 
 @media (min-width: 800px) {
@@ -57,6 +60,29 @@ img {
 
 strong { font-weight: var(--fw-bold) }
 
+:focus {
+    outline: 3px solid var(--clr-accent);
+    outline-offset: 3px;                                    
+}
+
+/* Buttons */
+
+
+.btn {
+    display: inline-block;
+    padding: .5em 2.5em;
+    background: var(--clr-accent);
+    color: var(--clr-dark);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight:  var(--fw-bold);
+    transition: transform 200ms ease-in-out;
+
+}
+
 /* Typography */
 
 h1,
@@ -84,18 +110,30 @@ h3 { font-size: var(--fs-h3) }
     display: block;
 }
 
+.section__title--projects {
+    color: var(--clr-accent)
+}
+
 .section__subtitle {
     margin: 0;
     font-size: var(--fs-h3);
 }
 
+.section__subtitle--projects {
+    color: var(--clr-dark);
+    font-weight: var(--fw-reg);
+}
+
 
 .section__subtitle--intro,
 .section__subtitle--about,
-.section__subtitle--project {
+.section__subtitle--projects {
     background: var(--clr-accent);
+    padding: .25em;
     font-family: var(--ff-secondary);
+    color: var(--clr-light)
     margin-bottom: 1em;
+    
 }
 
 
@@ -107,6 +145,14 @@ nav { display: none;}
 
 .intro {
     position: relative;
+}
+
+.intro__img {
+    box-shadow: var(--bs);/* creates shadow on image */
+}
+
+.section__subtitle--intro {
+    display: inline-block;
 }
 
 @media (min-width: 600px) {
@@ -124,6 +170,8 @@ nav { display: none;}
     .intro__img {
         grid-area: img;
         min-width: 250px;
+        position: relative;/*places subtitle bar behind picture */
+        z-index: 2;/*extra measure to ensure subtitle bar goes behind picture */
     }
     
     .section__subtitle--intro {
@@ -137,6 +185,112 @@ nav { display: none;}
     }
 }
 
+
+/* My Services Section */
+
+.my-services {
+    background-color: var(--clr-dark);
+    background-image: url(../img/laptopWithCode.jpg);
+    background-size: cover;
+    background-blend-mode: multiply;
+    color: var(--clr-light);
+    text-align: center;
+}
+
+.section__title--services {
+    color: var(--clr-accent);
+    position: relative;
+}
+
+.section__title--services::after {
+    content: '';
+    display: block;
+    width: 2em;
+    height: 1px;
+    margin: 0.5em auto 1em;
+    background: var(--clr-light);
+    opacity: 0.25;
+}
+
+.services {
+    margin-bottom: 4em;
+}
+
+.service {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+@media (min-width: 500px) {
+    .services {
+        display: flex;
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+        column-gap: 2.5em;
+    }
+
+    .about-me {
+        max-width: 1000px;
+        margin: 0 auto;
+
+    }
+
+    .about-me__img {
+        box-shadow: var(--bs);
+    }
+
+    @media (min-width: 600px) {
+        .about-me {
+            display: grid;
+            grid-template-columns: 1fr 200px;
+            grid-template-areas:
+                "title img"
+                "subtitle img"
+                "text img";
+            grid-column-gap: 2em;
+            
+
+        }
+        .section__title--about {
+            grid-area: title;
+        }
+
+        .section__subtitle--about {
+            grid-column: 1 / -1;
+            grid-row: 2;
+            position: relative;
+            left: -1em;
+            width: calc(100% + 2em);
+            padding-left: 2em;
+            padding-right: calc(200px + 4em);
+        }
+        
+
+        .about-me__img {
+           grid-area: img;
+           position: relative;
+           z-index: 2;
+        }
+    }
+
+    .projects {
+        background-color: var(--clr-dark);
+        color: var(--clr-light);
+        text-align: center;
+    }
+
+    .portfolio {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+   
+
+   
+
+  
+}
 
 
 
