@@ -100,6 +100,9 @@ h1 { font-size: var(--fs-h1) }
 h2 { font-size: var(--fs-h2) }
 h3 { font-size: var(--fs-h3) }
 
+.bg-clr {
+    background-color: var(--clr-dark);
+}
 
 .section__title {
     margin-bottom: .15em;
@@ -138,6 +141,9 @@ h3 { font-size: var(--fs-h3) }
     color: var(--clr-light)
     margin-bottom: 1em;
     
+}
+.intro__img {
+
 }
 
 
@@ -278,6 +284,10 @@ header {
     box-shadow: var(--bs);/* creates shadow on image */
 }
 
+.intro_img {
+    box-shadow: var(--bs);/* creates shadow on image */
+}
+
 .section__subtitle--intro {
     display: inline-block;
 }
@@ -300,6 +310,8 @@ header {
         position: relative;/*places subtitle bar behind picture */
         z-index: 2;/*extra measure to ensure subtitle bar goes behind picture */
     }
+
+   
     
     .section__subtitle--intro {
         align-self: start;
@@ -401,6 +413,60 @@ header {
         }
     }
 
+    /* Project1 Page */
+
+    .portfolio-item-individual {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        margin-right: 35em;
+    }
+
+    .paragraph__position {
+        display:grid;
+        text-align:left;
+        grid-template-columns: repeat(auto-fit, minmax(900px, 1fr));
+        font-size: var(--fs-h3);
+        font-family: var(--ff-secondary);
+        font-weight: var(--fw-bold);
+        margin-top: 0.75rem;
+        margin-left: 11.5em;
+    }
+/* Intro Page */
+    .intro__img {
+        transition: 
+            transform 750ms cubic-bezier(.9, 0, .9, 3),
+            opacity 250ms linear;
+        float: left;
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+
+    }
+
+    .intro__img:focus {
+        position: relative;
+        z-index: 2;
+
+    }
+
+    .intro__img:hover,
+    .intro__item:focus .portfolio__img {
+        transform: scale(1.2);
+    }
+
+    
+    .about-me__img {
+        transition: 
+            transform 750ms cubic-bezier(.9, 0, .9, 3),
+            opacity 250ms linear;
+    }
+   
+
+    .about-me__img:hover,
+    .about-me__item:focus .about-me__img {
+        transform: scale(1.2);
+    }
+
     .projects {
         background-color: var(--clr-dark);
         color: var(--clr-light);
@@ -437,6 +503,19 @@ header {
 .portfolio__item:focus .portfolio__img {
     transform: scale(1.2);
     opacity: .5;
+}
+
+.portfolio-item-individual {
+    
+   
+    
+}
+
+.description__paragraph {
+
+    text-align: center;
+    text-decoration: none;
+    text;
 }
 
 
@@ -492,14 +571,6 @@ header {
 
 
 
-
-
-
-   
-
-   
-
-  
 }
 
 
